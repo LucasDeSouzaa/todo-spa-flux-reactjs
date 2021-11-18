@@ -1,13 +1,13 @@
 import React from 'react';
 import Index from '../pages/index'
-import {Route, BrowserRouter, Router} from "react-router-dom";
+import {Route, BrowserRouter, Routes} from "react-router-dom";
 
 const Rotas = () => {
     return (
         <BrowserRouter>
-            <Router>
+            <Routes>
                 <Route path="/" element={<Index />} />
-            </Router>
+            </Routes>
         </BrowserRouter>
     )
 }
