@@ -1,7 +1,7 @@
-import axios from 'axios'
+import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://tcc-api-crud.herokuapp.com' //baseurl
+  baseURL: 'https://tcc-api-crud.herokuapp.com',
 })
 
 export default api

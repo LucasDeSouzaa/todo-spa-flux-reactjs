@@ -1,7 +1,7 @@
-import React, { useContext, useEffect } from 'react'
-import { Cardboard } from '../components/cardboard'
-import { GlobalContext } from '../contexts/Provider'
-import { TodoActions } from '../contexts/actions/todoAction'
+import React, { useContext, useEffect } from 'react';
+import { Cardboard } from './cardboard';
+import { GlobalContext } from '../contexts/Provider';
+import { TodoActions } from '../contexts/flux/todoAction';
 
 const MostraTodo = () => {
   const context = useContext(GlobalContext)

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 const Cardboard = (props) => {
     const [editable, setEditable] = useState(false)
@@ -29,13 +29,12 @@ const Cardboard = (props) => {
                     value={!!item.description ? item.description : ''}
                     onChange={(e) => handleOnChange({ title: item.title, id: item.id, description: e.target.value })}
                 />
-                <h6 className={editable === false ? "card-subtitle mb-2 text-muted" : "card-subtitle mb-2 text-muted d-none"}>
-                    { 
-                        !!item.updated_at 
-                            ? <p>Atualizado em: {item.updated_at}</p>
-                            : <p>Criado em: {item.created_at}</p>
-                    }
-                </h6>
+
+                { 
+                    !!item.updated_at 
+                        ? <h6 className={editable === false ? "card-subtitle mb-2 text-muted" : "card-subtitle mb-2 text-muted d-none"}>Atualizado em: {item.updated_at}</h6>
+                        : <h6 className={editable === false ? "card-subtitle mb-2 text-muted" : "card-subtitle mb-2 text-muted d-none"}>Criado em: {item.created_at}</h6>
+                }
                 
                 <div className="d-flex justify-content-end">
                     <button 

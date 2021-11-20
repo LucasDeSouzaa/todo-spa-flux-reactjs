@@ -1,5 +1,5 @@
-import api from "../../services/api";
-import { TODO_ACTIONS } from "../reducer";
+import api from '../../services/api';
+import { TODO_ACTIONS } from './reducer'
 
 let TodoActions = {
     adicionaItem: async function(dispatch, payload) {
@@ -18,6 +18,7 @@ let TodoActions = {
         }
 
         dispatch({ type: TODO_ACTIONS.LOAD_ITEM, payload: Payload})
+
     },
 
     editaItem: async function(dispatch, payload) {
@@ -32,6 +33,7 @@ let TodoActions = {
 
     saveItem: async function(dispatch, payload) {
         let Payload
+        
         const response = await api.put(`/api/task/${payload.id}`, { title: payload.title, description: payload.description })
 
         Payload = { 

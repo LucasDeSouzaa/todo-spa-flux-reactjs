@@ -1,7 +1,7 @@
-import React, { createContext, useReducer } from 'react'
+import React, { createContext, useReducer } from 'react';
 
-import todoReducer from './reducer'
-import INITIAL_STATE from './initialState'
+import todoReducer from './flux/reducer';
+import INITIAL_STATE from './flux/initialState';
 
 export const GlobalContext = createContext({})
 
